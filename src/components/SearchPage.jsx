@@ -1,11 +1,12 @@
+/* eslint-disable no-undef */
 
-import { useLocation } from 'react-router-dom';
+// import { useLocation } from 'react-router-dom';
 
 
 import Card from './Card';
 
 export const SearchPage = () => {
-	const location = useLocation();
+	// const location = useLocation();
 
 	
 

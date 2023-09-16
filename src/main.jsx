@@ -8,6 +8,9 @@ import Navbar from './components/Navbar.jsx'
 import Header from './components/Header.jsx'
 import RightContent from './components/RightContent'
 import SearchList from './components/SearchList'
+import Modal from './components/Modal'
+import NoutFound from './pages/NoutFound'
+import SavedPokemons from './components/SavedPokemons'
 
 
 
@@ -19,6 +22,9 @@ ReactDOM.render(
         <Route path='/' element={<Header />} />
         <Route path='/pokemon/:id' element={<RightContent />} /> 
         <Route path='/search/:id' element={<SearchList />} />
+        <Route path='/modal'   element={<Modal />} />
+        <Route path='/saved'  element={<SavedPokemons />} /> 
+        <Route path='*' element={<NoutFound />} />
 
       </Routes>
       

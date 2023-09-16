@@ -41,7 +41,7 @@ const Navbar = () => {
                 setError(""); // Xato xabarini tozalash
               }}
             />
-            <button className="px-4 py-3 shadow-md rounded" type="submit">
+            <button className="px-4 py-3  bg-slate-500 hover:bg-slate-300 active:bg-slate-600 shadow-md rounded" type="submit">
               Send
             </button>
           </form>
