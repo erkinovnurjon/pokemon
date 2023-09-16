@@ -53,15 +53,15 @@ const RightContent = () => {
           <div className="text-center p-8">
             <h1 className="my-5 text-center text-5xl">{data.name}</h1>
             <div className='card' style={{ display: openModal ? 'none' : 'block' }}>
-              <div className='flex card justify-between gap-48'>
-                <div className="flex justify-center">
+              <div  className='flex card justify-between gap-48'>
+                <div data-aos="fade-right" className="flex justify-center">
                   <img
                     className="w-[450px] my-4 text-center"
                     src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`}
                     alt=""
                   />
                 </div>
-                <div>
+                <div data-aos="fade-left">
                   <div className="abilities">
                     {data.abilities.map((poke, index) => (
                       <div className="flex justify-center" key={index}>
@@ -87,7 +87,7 @@ const RightContent = () => {
                   <div className='relative'>
                     <Link to={'/'}>
                       <button                    
-                        className='absolute px-3 py-2 mt-40 rounded shadow-2xl bg-slate-300 before:hover:bg-slate-400 hover:bg-slate-500'
+                        className='absolute px-3 py-2 mt-28 rounded shadow-2xl bg-slate-300 before:hover:bg-slate-400 hover:bg-slate-500'
                       >
                         back
                       </button>
@@ -95,7 +95,7 @@ const RightContent = () => {
                   </div>
                   <button 
                     onClick={openModalHandler}
-                    className='absolute px-3 py-2 mt-40 ml-16 rounded shadow-2xl bg-slate-300 before:hover:bg-slate-400 hover:bg-slate-500'>
+                    className='absolute px-3 py-2 mt-28 ml-16 rounded shadow-2xl bg-slate-300 before:hover:bg-slate-400 hover:bg-slate-500'>
                     open
                   </button>
                 </div>         
@@ -111,21 +111,21 @@ const RightContent = () => {
                     <div className="modal-dialog">
                       <div className="modal-content flex justify-between gap-8">
                         <div className="modal-header">
-                          <h5 className="modal-title text-4xl" id="exampleModalLabel">Modal Title</h5>
-                          <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={closeModalHandler}></button>
+                          {/* <h5 className="modal-title text-4xl" id="exampleModalLabel">Modal Title</h5> */}
+            
                         </div>
                         <div className="modal-body">
                           {
                             data ?(
                               <>
                                 <div className=' flex justify-between gap-9'>
-                                  {/* <div className='flex justify-center'>
+                                  <div className='flex justify-center'>
                                     <img
                                       className="w-[250px] my-4 text-center"
                                       src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`}
                                       alt=""
                                     />
-                                  </div> */}
+                                  </div>
                                   <div>
                                     <div className="abilities">
                                       {data.abilities.map((poke, index) => (
@@ -160,12 +160,12 @@ const RightContent = () => {
                             ) : null
                           }
                         </div>
-                        <div className="modal-footer block">
-                          <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={closeModalHandler}>Close</button>
-                          <button type="button" className="btn btn-primary block bg-slate-200 px-3 py-2 rounded hover:bg-slate-300 active:bg-slate-400" onClick={localSave}>Save </button>
+                        <div className="modal-footer  flex gap-7">
+                          <button type="button" className="btn btn-secondary  h-10  bg-slate-200 px-3 py-2 rounded hover:bg-slate-300 active:bg-slate-400" data-bs-dismiss="modal" onClick={closeModalHandler}>Close</button>
+                          <button type="button" className=" h-10  bg-slate-200 px-3 py-2 rounded hover:bg-slate-300 active:bg-slate-400" onClick={localSave}>Save </button>
                           <Link to={'/saved'}>
-                          <button>
-                            saqlanganlar
+                          <button className=' h-10  bg-slate-200 px-3 py-2 rounded hover:bg-slate-300 active:bg-slate-400'>
+                            Saved Ones
                           </button>
                           
                            </Link>
